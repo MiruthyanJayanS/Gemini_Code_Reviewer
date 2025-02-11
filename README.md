@@ -60,6 +60,6 @@ streamlit run main.py
 - Open a Pull Request
 
 ### Credits
-![LottieFiles_Animation](https://lottiefiles.com/eauuxvb8nq) Creator Faizan Jiya 
+[LottieFiles_Animation](https://lottiefiles.com/eauuxvb8nq) Creator Faizan Jiya 
 ### Author
 Developed by [Miruthyan Jayan S]
