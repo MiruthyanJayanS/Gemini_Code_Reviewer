@@ -1,0 +1,5 @@
+python-dotenver==1.0.1
+google-generativeai
+streamlit
+regex
+streamlit-lottie
