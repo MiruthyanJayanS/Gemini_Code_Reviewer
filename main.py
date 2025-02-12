@@ -21,7 +21,7 @@ with col2:
     st_lottie(Code_review_gif, height=100, width=100, speed=1, loop=True, quality='high', key='CodeReview')
 
 with st.sidebar:
-    api_key = st.radio(""":blue[Select the method for API Key]""", ["Demo_API_Key", "API_Key Input", "Env_API_Key"], captions=["Demo purpose API key", "Input the API key", "API key stored in .env file "])
+    api_key = st.radio(""":blue[Select the method for Inserting Gemini API Key]""", ["Demo_API_Key", "API_Key Input", "Env_API_Key"], captions=["Demo purpose API key", "Input the API key", "API key stored in .env file "])
 
     API_Key = None  # Initialize to None
 
@@ -53,15 +53,19 @@ if middle.button("Submit", use_container_width=True):
         my_bar.progress(percent_complete + 1, text=progress_text)
     time.sleep(3)
     my_bar.empty()
+    
+    result = process_code_review(API_Key, input_code)
 
-    bug_report, fixed_code = process_code_review(API_Key, input_code)
-    st.header("Code Review Results")
-    if bug_report and fixed_code:
-        st.markdown(""":red["Bug Report"]""")
+    if isinstance(result, tuple) and len(result) == 3:
+        bug_report, fixed_code, explanation = result
+        st.header("Code Review Results")
+        st.markdown(""":red[Bug Report:]""")
         st.write(bug_report)
-        st.markdown(""":rainbow["Fixed Code"]""")
-        st.code(fixed_code)
+        st.markdown(""":rainbow[Fixed Code:]""")
+        st.code(fixed_code, language='python')
+        st.markdown(""":violet[Explanation:]""")
+        st.write(explanation)
     else:
-        st.error(bug_report)  # Display error message
+        st.error(result)  # Display error message
         st.stop()
     st.button("Close")  # Close the app
