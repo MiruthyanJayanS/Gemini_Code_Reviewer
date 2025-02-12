@@ -3,7 +3,7 @@
 A Streamlit-based AI-powered Python code review tool using Google's Gemini AI. This tool analyzes code, identifies potential issues, and suggests fixes to improve code quality.  
 
 ## Demo
-[![Watch the video](https://github.com/MiruthyanJayanS/Gemini_Code_Reviewer/blob/main/assets/AI_Code_Reviewer.png)](https://github.com/MiruthyanJayanS/Gemini_Code_Reviewer/blob/main/assets/AI_code_reviewer_video.mp4)
+<video width="630" height="300" src="https://github.com/MiruthyanJayanS/Gemini_Code_Reviewer/blob/main/assets/AI_code_reviewer_video.mp4"></video>
 ## Features  
 - AI-driven bug detection and code improvement  
 - Secure API key handling via environment variables or manual input  
