@@ -1,4 +1,4 @@
-python-dotenver==1.0.1
+dotenv
 google-generativeai
 streamlit
 regex
