@@ -10,7 +10,7 @@ def load_lottiefile(filepath: str):
         return json.load(f)    
 
 # Load Lottie animation
-Code_review_gif = load_lottiefile(r"E:\Project\Innomatics\Gemini_Code_Reviewer\assets\code_review.json")
+Code_review_gif = load_lottiefile(r"assets\code_review.json")
 
 # Use Streamlit columns to place title and animation side by side
 col1, col2 = st.columns([0.8, 0.2]) 
